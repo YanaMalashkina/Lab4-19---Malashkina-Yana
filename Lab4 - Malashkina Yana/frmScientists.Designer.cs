@@ -39,6 +39,7 @@
 			this.txtbSurname = new System.Windows.Forms.TextBox();
 			this.txtbFaculty = new System.Windows.Forms.TextBox();
 			this.txtbKafedra = new System.Windows.Forms.TextBox();
+			this.btnInfo = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.grdScientists)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -140,11 +141,22 @@
 			this.txtbKafedra.Size = new System.Drawing.Size(188, 26);
 			this.txtbKafedra.TabIndex = 10;
 			// 
+			// btnInfo
+			// 
+			this.btnInfo.Location = new System.Drawing.Point(388, 331);
+			this.btnInfo.Name = "btnInfo";
+			this.btnInfo.Size = new System.Drawing.Size(164, 38);
+			this.btnInfo.TabIndex = 11;
+			this.btnInfo.Text = "Про програму";
+			this.btnInfo.UseVisualStyleBackColor = true;
+			this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+			// 
 			// frmScientists
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(991, 567);
+			this.Controls.Add(this.btnInfo);
 			this.Controls.Add(this.txtbKafedra);
 			this.Controls.Add(this.txtbFaculty);
 			this.Controls.Add(this.txtbSurname);
@@ -177,6 +189,7 @@
 		private System.Windows.Forms.TextBox txtbSurname;
 		private System.Windows.Forms.TextBox txtbFaculty;
 		private System.Windows.Forms.TextBox txtbKafedra;
+		private System.Windows.Forms.Button btnInfo;
 	}
 }
 

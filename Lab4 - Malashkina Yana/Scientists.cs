@@ -6,7 +6,7 @@ namespace Lab4___Malashkina_Yana
 	internal class Scientists
 	{
 		private List<Scientist> list;
-		string filePath;
+		private string filePath;
 		public Scientists() 
 		{
 			list = new List<Scientist>();

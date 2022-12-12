@@ -79,5 +79,11 @@ namespace Lab4___Malashkina_Yana
 			grdScientists.AutoGenerateColumns = true;
 			grdScientists.DataSource = list;
 		}
+
+		private void btnInfo_Click(object sender, EventArgs e)
+		{
+			frmAbout frmAbout = new frmAbout();
+			frmAbout.ShowDialog();
+		}
 	}
 }
