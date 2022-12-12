@@ -32,6 +32,13 @@
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.btnEdit = new System.Windows.Forms.Button();
 			this.btnDelete = new System.Windows.Forms.Button();
+			this.btnSearch = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
+			this.txtbSurname = new System.Windows.Forms.TextBox();
+			this.txtbFaculty = new System.Windows.Forms.TextBox();
+			this.txtbKafedra = new System.Windows.Forms.TextBox();
 			((System.ComponentModel.ISupportInitialize)(this.grdScientists)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -75,11 +82,76 @@
 			this.btnDelete.UseVisualStyleBackColor = true;
 			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
+			// btnSearch
+			// 
+			this.btnSearch.Location = new System.Drawing.Point(12, 507);
+			this.btnSearch.Name = "btnSearch";
+			this.btnSearch.Size = new System.Drawing.Size(113, 38);
+			this.btnSearch.TabIndex = 4;
+			this.btnSearch.Text = "Пошук ";
+			this.btnSearch.UseVisualStyleBackColor = true;
+			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(25, 397);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(81, 20);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Прізвище";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(12, 435);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(94, 20);
+			this.label2.TabIndex = 6;
+			this.label2.Text = "Факультет";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(25, 469);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(81, 20);
+			this.label3.TabIndex = 7;
+			this.label3.Text = "Кафедра";
+			// 
+			// txtbSurname
+			// 
+			this.txtbSurname.Location = new System.Drawing.Point(131, 394);
+			this.txtbSurname.Name = "txtbSurname";
+			this.txtbSurname.Size = new System.Drawing.Size(188, 26);
+			this.txtbSurname.TabIndex = 8;
+			// 
+			// txtbFaculty
+			// 
+			this.txtbFaculty.Location = new System.Drawing.Point(131, 432);
+			this.txtbFaculty.Name = "txtbFaculty";
+			this.txtbFaculty.Size = new System.Drawing.Size(188, 26);
+			this.txtbFaculty.TabIndex = 9;
+			// 
+			// txtbKafedra
+			// 
+			this.txtbKafedra.Location = new System.Drawing.Point(131, 469);
+			this.txtbKafedra.Name = "txtbKafedra";
+			this.txtbKafedra.Size = new System.Drawing.Size(188, 26);
+			this.txtbKafedra.TabIndex = 10;
+			// 
 			// frmScientists
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(991, 376);
+			this.ClientSize = new System.Drawing.Size(991, 567);
+			this.Controls.Add(this.txtbKafedra);
+			this.Controls.Add(this.txtbFaculty);
+			this.Controls.Add(this.txtbSurname);
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.label1);
+			this.Controls.Add(this.btnSearch);
 			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.btnEdit);
 			this.Controls.Add(this.btnAdd);
@@ -88,6 +160,7 @@
 			this.Text = "Кадри науковців (Зарплата)";
 			((System.ComponentModel.ISupportInitialize)(this.grdScientists)).EndInit();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -97,6 +170,13 @@
         private System.Windows.Forms.Button btnAdd;
 		private System.Windows.Forms.Button btnEdit;
 		private System.Windows.Forms.Button btnDelete;
+		private System.Windows.Forms.Button btnSearch;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.TextBox txtbSurname;
+		private System.Windows.Forms.TextBox txtbFaculty;
+		private System.Windows.Forms.TextBox txtbKafedra;
 	}
 }
 

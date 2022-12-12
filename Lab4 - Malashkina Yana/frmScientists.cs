@@ -12,24 +12,26 @@ namespace Lab4___Malashkina_Yana
 {
 	public partial class frmScientists : Form
 	{
-		private BindingList<Scientist> list = new BindingList<Scientist>();
+	    Scientists scientists;
 
 		public frmScientists()
 		{
 			InitializeComponent();
+			scientists = new Scientists();	
 			LoadData();
 		}
 
 		private void LoadData()
 		{
-			grdScientists.AutoGenerateColumns = true;
-			grdScientists.DataSource = list;
+			scientists.OpenFromFile();
+			BindGrid(scientists.List);
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			Scientist scientist = ShowForm(new Scientist());
-			list.Add(scientist);
+			scientists.List.Add(scientist);
+			scientists.SaveToFile();
 			LoadData();
 		}
 
@@ -51,17 +53,31 @@ namespace Lab4___Malashkina_Yana
 		private void btnEdit_Click(object sender, EventArgs e)
 		{
 			CurrentScientist = (Scientist)grdScientists.CurrentRow.DataBoundItem;
-			CurrentScientistIndex = list.IndexOf(CurrentScientist);
+			CurrentScientistIndex = scientists.List.IndexOf(CurrentScientist);
 			Scientist editedscientist = ShowForm(CurrentScientist);
-			list[CurrentScientistIndex] = editedscientist;
+			scientists.List[CurrentScientistIndex] = editedscientist;
+			scientists.SaveToFile();
 			LoadData();
 		}
 
 		private void btnDelete_Click(object sender, EventArgs e)
 		{
 			CurrentScientist = (Scientist)grdScientists.CurrentRow.DataBoundItem;
-			list.Remove(CurrentScientist);
+			scientists.List.Remove(CurrentScientist);
 			LoadData();
+			scientists.SaveToFile();
+		}
+
+		private void btnSearch_Click(object sender, EventArgs e)
+		{
+			List<Scientist> filteredItems = Helper.Filter(scientists.List, txtbSurname.Text, txtbFaculty.Text, txtbKafedra.Text);
+			BindGrid(filteredItems);
+		}
+
+		private void BindGrid(List<Scientist> list)
+		{
+			grdScientists.AutoGenerateColumns = true;
+			grdScientists.DataSource = list;
 		}
 	}
 }
