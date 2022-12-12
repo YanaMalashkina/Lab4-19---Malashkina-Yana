@@ -21,10 +21,10 @@ namespace Lab4___Malashkina_Yana
 		[DisplayName("Посада")]
 		public string Position { get; set; }
 
-		[DisplayName("Посадовий оклад")]
+		[DisplayName("Посадовий оклад (грн)")]
 		public decimal Salary { get; set; }
 
-		[DisplayName("Час перебування на посаді")]
+		[DisplayName("Час перебування на посаді (кількість місяців)")]
 		public decimal PositionDuration { get; set; }
 
 	}

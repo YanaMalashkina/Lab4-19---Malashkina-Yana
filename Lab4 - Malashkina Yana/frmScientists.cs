@@ -64,8 +64,8 @@ namespace Lab4___Malashkina_Yana
 		{
 			CurrentScientist = (Scientist)grdScientists.CurrentRow.DataBoundItem;
 			scientists.List.Remove(CurrentScientist);
-			LoadData();
 			scientists.SaveToFile();
+			LoadData();
 		}
 
 		private void btnSearch_Click(object sender, EventArgs e)

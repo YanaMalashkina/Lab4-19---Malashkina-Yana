@@ -148,9 +148,9 @@
 			this.label6.AutoSize = true;
 			this.label6.Location = new System.Drawing.Point(36, 288);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(214, 20);
+			this.label6.Size = new System.Drawing.Size(214, 40);
 			this.label6.TabIndex = 11;
-			this.label6.Text = "Час перебування на посаді";
+			this.label6.Text = "Час перебування на посаді\r\n(кількість місяців)";
 			// 
 			// txtPositionDuration
 			// 
